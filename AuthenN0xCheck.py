@@ -62,7 +62,8 @@ def estimate_crack_time(password):
         charset_size += 32
 
     combinations = charset_size ** len(password)
-    attempts_per_second = 1_000_000_000
+    # Updated to reflect a high-performance cracking rig
+    attempts_per_second = 100_000_000_000  
     seconds = combinations / attempts_per_second
 
     return seconds
